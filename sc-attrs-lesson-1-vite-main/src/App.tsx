@@ -13,6 +13,7 @@ function App() {
                     <StyledBody>
                         <StyledTitle>Headline</StyledTitle>
                         <p>Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor</p>
                         <StyledText>Faucibus. Faucibus. Sit sit sapien sit<br/> tempusrisu ut. Sit molestie ornare in venen.</StyledText>
                         <StyledButtons>
                             <StyledBtn btnType={'primary'}>See more</StyledBtn>
