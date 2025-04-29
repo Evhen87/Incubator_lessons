@@ -11,6 +11,7 @@ function App() {
             <Main />
             <Skills />
             <Projects />
+
         </div>
     )
 }
