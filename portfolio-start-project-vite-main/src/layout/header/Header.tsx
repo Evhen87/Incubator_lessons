@@ -2,13 +2,13 @@ import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo.tsx";
 import {Menu} from "../../components/menu/Menu.tsx";
 
-const items = ["Home", "About", "Tech Stack", "Projects", ""]
+const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
 
 export const Header = () => {
     return (
         <StyledHeader>
             <Logo />
-            <Menu />
+            <Menu menuItems={items}/>
         </StyledHeader>
     );
 };
