@@ -11,7 +11,7 @@ export const Mail = () => {
     );
 };
 
-const StyledMail = styled.div`
+const StyledMail = styled.section`
     text-align: center;
     font-size: 58px;
 `

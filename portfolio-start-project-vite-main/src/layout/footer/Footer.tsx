@@ -25,8 +25,12 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-        
+        background-color: #191919;
 `
 const StyledFooterText = styled.p`
-        
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.44444;
+    text-align: center;
+    color: #a7a7a7;
 `
