@@ -13,6 +13,7 @@ export const Mail = () => {
 
 const StyledMail = styled.div`
     text-align: center;
+    font-size: 58px;
 `
 
 const Text = styled.p`
