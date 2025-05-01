@@ -47,16 +47,26 @@ const Image = styled.img`
 `
 
 const WorkBody = styled.div`
-    
+    font-family: "Poppins", sans-serif;
 `
 const WorkTitle = styled.h4`
-    
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 0.92857;
+    text-align: center;
+    color: #ccc;
 `
 const WorkText = styled.p`
-    
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.44444;
+    color: #ccc;
 `
 const WorkStack = styled.p`
-    
+    line-height: 1.625;
+    color: #ccc;
+    font-weight: 300;
+    font-size: 14px;
 `
 const WorkPreview = styled.div`
     
@@ -68,11 +78,26 @@ const ViewCode = styled.div`
     
 `
 const WorkPreviewText = styled.p`
-    
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.625;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fff;
 `
 const LivePreviewLink = styled.a`
-    
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.625;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fff;
 `
 const ViewCodeLink = styled.a`
-    
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.625;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fff;
 `
