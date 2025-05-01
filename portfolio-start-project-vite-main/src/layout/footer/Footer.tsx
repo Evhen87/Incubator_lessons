@@ -24,7 +24,7 @@ export const Footer = () => {
     );
 };
 
-const StyledFooter = styled.div`
+const StyledFooter = styled.footer`
         
 `
 const StyledFooterText = styled.p`
