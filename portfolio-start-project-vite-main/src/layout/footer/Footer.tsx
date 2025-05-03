@@ -25,7 +25,7 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-        background-color: #191919;
+    background-color: #4ba631;
 `
 const StyledFooterText = styled.p`
     font-weight: 400;

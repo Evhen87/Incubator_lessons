@@ -1,4 +1,5 @@
 import {createGlobalStyle} from "styled-components";
+import {theme} from "./Theme.ts";
 
 export const GlobalStyle = createGlobalStyle `
     *,
@@ -11,10 +12,28 @@ export const GlobalStyle = createGlobalStyle `
     
     body {
         margin: 0;
-        font-family: 'Poppins', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        color: ${theme.colors.font2};
+    }
+    
+    a {
+        text-decoration: unset;
+    }
+    
+    ul {
+        list-style: unset;
+    }
+    
+    button {
+        background-color: unset;
+        border: unset;
+    }
+    
+    section {
+        background-color: ${theme.colors.primaryBg};
     }
 `
