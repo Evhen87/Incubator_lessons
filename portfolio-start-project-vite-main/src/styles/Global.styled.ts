@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle `
     }
     
     ul {
-        list-style: unset;
+        list-style: none;
     }
     
     button {

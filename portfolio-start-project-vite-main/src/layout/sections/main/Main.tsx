@@ -1,21 +1,24 @@
 import styled from "styled-components";
 import photo from "../../../assets/images/photos/50353683 1.jpg"
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {Container} from "../../../components/Container.ts";
 
 export const Main = () => {
     return (
         <StyledMain>
-            <FlexWrapper align={"center"} justify={"space-around"}>
-                <MainBody>
-                    <p>Hi 👋,<br/>
-                    My name is <br/>
-                    <span>Kushner Yauheni</span> <br/>
-                    I build things for web</p>
-                </MainBody>
-                <PhotoGradient>
-                    <Photo src={photo} alt=""/>
-                </PhotoGradient>
-            </FlexWrapper>
+            <Container>
+                <FlexWrapper align={"center"} justify={"space-around"}>
+                    <MainBody>
+                        <p>Hi 👋,<br/>
+                        My name is <br/>
+                        <span>Kushner Yauheni</span> <br/>
+                        I build things for web</p>
+                    </MainBody>
+                    <PhotoGradient>
+                        <Photo src={photo} alt=""/>
+                    </PhotoGradient>
+                </FlexWrapper>
+            </Container>
         </StyledMain>
     );
 };
