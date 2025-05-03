@@ -2,6 +2,8 @@ import styled from "styled-components";
 import photo from "../../../assets/images/photos/50353683 1.jpg"
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Container} from "../../../components/Container.ts";
+import {TextGradient} from "../../../components/TextGradient.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 export const Main = () => {
     return (
@@ -9,14 +11,14 @@ export const Main = () => {
             <Container>
                 <FlexWrapper align={"center"} justify={"space-around"}>
                     <MainBody>
-                        <p>Hi 👋,<br/>
+                        <Text>Hi 👋,<br/>
                         My name is <br/>
-                        <span>Kushner Yauheni</span> <br/>
-                        I build things for web</p>
+                        <TextGradient>Kushner Yauheni</TextGradient> <br/>
+                        I build things for web</Text>
                     </MainBody>
-                    <PhotoGradient>
+                    <PhotoWrapper>
                         <Photo src={photo} alt=""/>
-                    </PhotoGradient>
+                    </PhotoWrapper>
                 </FlexWrapper>
             </Container>
         </StyledMain>
@@ -28,37 +30,42 @@ const StyledMain = styled.main`
     background-color: #191919;
     display: flex;
 `
-const MainBody =styled.div`  
-    * {        
-        text-align: left;
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-size: 58px;
-        line-height: 1.2069;
-        letter-spacing: -0.02em;
-        color: #d9d9d9;
-    }
-    span {
-        background: -webkit-linear-gradient(180deg, #13b0f5 2.6%, #e70faa 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;    
-    }
+const MainBody =styled.div`
+    text-align: left;
 `
-
+const Text =styled.h2`    
+    font-weight: 700;
+    font-size: 58px;
+    letter-spacing: -0.02em;
+    color: ${theme.colors.font1};
+`
+const PhotoWrapper =styled.div`
+    
+`
 
 const Photo = styled.img`
     border-radius: 50%;
-    width: 349px;
-    height: 349px;
+    max-width: 349px;
+    max-height: 349px;
     object-fit: cover;
-    position: absolute;
+    position: relative;
     top: 8px;
     left: 8px;
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 500px;
+        height: 500px;
+        background: linear-gradient(#E70FAA, #00C0FD);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 `
-const PhotoGradient = styled.div`
+/*const PhotoGradient = styled.div`
     position: relative;
     background: linear-gradient(#E70FAA, #00C0FD);    
     width: 365px;
     height: 365px;
     border-radius: 50%;
-`
+`*/

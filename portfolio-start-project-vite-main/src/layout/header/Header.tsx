@@ -4,7 +4,6 @@ import {Menu} from "../../components/menu/Menu.tsx";
 import {Container} from "../../components/Container.ts";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {SocialMedia} from "../../components/social_media/SocialMedia.tsx";
-import {theme} from "../../styles/Theme.ts";
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
 
@@ -26,7 +25,7 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
     padding: 40px 0;
-    background-color: ${theme.colors.primaryBg};
+    background-color: rgba(25,25,25,0.9);
     position: fixed;
     top: 0;
     left: 0;
