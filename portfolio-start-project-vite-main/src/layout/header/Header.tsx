@@ -26,6 +26,11 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
     padding: 40px 0;
-    background-color: ${theme.colors.primaryBg};    
+    background-color: ${theme.colors.primaryBg};
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
 `
 
