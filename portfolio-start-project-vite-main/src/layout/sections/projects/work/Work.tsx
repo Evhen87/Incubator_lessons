@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import {Icon} from "../../../../components/icon/Icon.tsx";
+import {theme} from "../../../../styles/Theme.ts";
+import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 
 type WorkPropsType = {
     title: string
@@ -16,29 +18,32 @@ export const Work = (props: WorkPropsType) => {
                 <WorkTitle>{props.title}</WorkTitle>
                 <WorkText>{props.text}</WorkText>
                 <WorkStack>{props.stackText}</WorkStack>
-                <WorkPreview>
-                    <LivePreview>
-                        <LivePreviewLink href={"#"}>
+                <FlexWrapper align={"center"}>
+                    <PreviewLink href={"#"}>
+                        <FlexWrapper >
                             <Icon iconId={"linkChain"} height={"20"} width={"20"} viewBox={"0 0 20 20"}></Icon>
                             <WorkPreviewText>Live Preview</WorkPreviewText>
-                        </LivePreviewLink>
-                    </LivePreview>
-                    <ViewCode>
-                        <ViewCodeLink href={"#"}>
+                        </FlexWrapper>
+                    </PreviewLink>
+                    <PreviewLink href={"#"}>
+                        <FlexWrapper >
                             <Icon iconId={"githubFillSmall"} height={"20"} width={"20"} viewBox={"0 0 20 20"}></Icon>
                             <WorkPreviewText>View Code</WorkPreviewText>
-                        </ViewCodeLink>
-                    </ViewCode>
-                </WorkPreview>
+                        </FlexWrapper>
+                    </PreviewLink>
+                </FlexWrapper>
             </WorkBody>
         </StyledWork>
     );
 };
 
 const StyledWork = styled.div`
-    background-color: black;
+    border-radius: 20px;
+    background-color: ${theme.colors.secondaryBg};
     max-width: 375px;
-    width: 100%;
+    width: 33.333%;
+    overflow: hidden;
+    margin-bottom: 65px;
 `
 const Image = styled.img`
     width: 100%;
@@ -47,36 +52,32 @@ const Image = styled.img`
 `
 
 const WorkBody = styled.div`
-    font-family: "Poppins", sans-serif;
+    padding: 28px;
+    color: ${theme.colors.font2};
+    text-align: left;
+    & > ${FlexWrapper} {
+        column-gap: 48px;
+    }
 `
 const WorkTitle = styled.h4`
     font-weight: 500;
     font-size: 28px;
     line-height: 0.92857;
-    text-align: center;
-    color: #ccc;
+    margin-bottom: 17px;
 `
 const WorkText = styled.p`
     font-weight: 300;
     font-size: 18px;
     line-height: 1.44444;
-    color: #ccc;
+    margin-bottom: 12px;
 `
 const WorkStack = styled.p`
     line-height: 1.625;
-    color: #ccc;
     font-weight: 300;
     font-size: 14px;
+    margin-bottom: 21px;
 `
-const WorkPreview = styled.div`
-    
-`
-const LivePreview = styled.div`
-    
-`
-const ViewCode = styled.div`
-    
-`
+
 const WorkPreviewText = styled.p`
     font-weight: 400;
     font-size: 16px;
@@ -85,19 +86,14 @@ const WorkPreviewText = styled.p`
     text-decoration-skip-ink: none;
     color: #fff;
 `
-const LivePreviewLink = styled.a`
+const PreviewLink = styled.a`
     font-weight: 400;
     font-size: 16px;
     line-height: 1.625;
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #fff;
-`
-const ViewCodeLink = styled.a`
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.625;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    color: #fff;
+    & > ${FlexWrapper} {
+        column-gap: 10px;        
+    }
 `

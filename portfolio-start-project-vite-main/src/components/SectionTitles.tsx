@@ -3,6 +3,7 @@ import {theme} from "../styles/Theme.ts";
 
 export const SectionTitles = styled.div`
     text-align: center;
+    margin-bottom: 110px;
 `
 
 export const SectionTitle = styled.h2`

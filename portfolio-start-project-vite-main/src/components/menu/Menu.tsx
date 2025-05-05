@@ -38,6 +38,7 @@ const Link = styled.a`
     line-height: 1.3;
     text-align: center;
     color: transparent;
+    text-transform: capitalize;
 `
 const Mask = styled.span`
     position: absolute;

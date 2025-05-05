@@ -23,6 +23,7 @@ export const GlobalStyle = createGlobalStyle `
     
     a {
         text-decoration: unset;
+        color: ${theme.colors.font3};
     }
     
     ul {
@@ -36,5 +37,6 @@ export const GlobalStyle = createGlobalStyle `
     
     section {
         background-color: ${theme.colors.primaryBg};
+        padding: 100px 0;
     }
 `

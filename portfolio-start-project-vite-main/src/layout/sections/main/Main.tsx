@@ -10,7 +10,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-around"}>
+                <FlexWrapper wrap={"wrap"} align={"center"} justify={"space-around"}>
                     <MainBody>
                         <Text>Hi 👋,<br/>
                         My name is <br/>
@@ -31,6 +31,7 @@ const StyledMain = styled.main`
     min-height: 100vh;
     background-color: #191919;
     display: flex;
+    overflow: hidden;
 `
 const MainBody =styled.div`
     text-align: left;
@@ -47,20 +48,16 @@ const PhotoWrapper =styled.div`
         content: "";
         display: inline-block;
         border-radius: 50%;
-        width: 365px;
-        height: 365px;
+        max-width: 365px;
+        max-height: 365px;
+        width: 104%;
+        height: 104%;
         background: linear-gradient(#E70FAA, #00C0FD);
         position: absolute;
-        top: 0;
-        left: 0;        
-    }
-    &:after {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }    
 `
 
 const Photo = styled.img`
@@ -69,16 +66,17 @@ const Photo = styled.img`
     max-height: 349px;
     object-fit: cover;
     position: relative;
-    top: 8px;
-    left: 8px;    
+    top: 0;
+    left: 0;    
 `
 
 const Abstract = styled.img`
     border-radius: 50%;
-    max-width: 630px;
-    max-height: 630px;
+    max-width: 180.5%;
+    max-height: 180.5%;
     object-fit: cover;
     position: absolute;
-    top: -120px;
-    left: -120px;    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 `

@@ -16,9 +16,10 @@ export const Skill = (props: SkillPropsType) => {
     );
 };
 
-const StyledSkill  = styled.div`   
-    padding: 50px;
-    gap: 50px;
+const StyledSkill  = styled.div`
+    padding: 15px;
+    min-width: 130px;
+    width: 16.6666%;
     display: flex;
     align-items: center;
     justify-content: center;
