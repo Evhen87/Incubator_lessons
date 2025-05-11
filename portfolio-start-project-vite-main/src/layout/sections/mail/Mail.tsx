@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {TextGradient} from "../../../components/TextGradient.tsx";
 import {Container} from "../../../components/Container.ts";
 import {theme} from "../../../styles/Theme.ts";
+import {font} from "../../../styles/Common.ts";
 
 export const Mail = () => {
     return (
@@ -17,13 +18,12 @@ export const Mail = () => {
 
 const StyledMail = styled.section`
     text-align: center;
-    font-size: 58px;
+    ${font({Fmin: 36, Fmax: 58})}
 `
 
 const Text = styled.p`
     font-family: "DM Sans", sans-serif;
     font-weight: 700;
-    font-size: 58px;
     line-height: 1.3;
     letter-spacing: -0.02em;
     text-align: center;

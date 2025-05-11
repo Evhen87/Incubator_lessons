@@ -10,8 +10,11 @@ export const FooterContacts = () => {
 };
 
 const StyledFooterContacts = styled.div`
+    margin-left: 20px;
     display: flex;
+    flex-wrap: wrap;
     column-gap: 63px;
+    row-gap: 20px;
     font-family: "DM Sans", sans-serif;
 `
 
