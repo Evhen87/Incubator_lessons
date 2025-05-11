@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme.ts";
 
-export const Menu = (props: {menuItems: Array<string>}) => {
+export const MobileMenuList = (props: {menuItems: Array<string>}) => {
     return (
         <StyledMenu>
             <MenuList>
@@ -24,18 +24,20 @@ export const Menu = (props: {menuItems: Array<string>}) => {
 };
 
 const StyledMenu = styled.nav`
-    margin-right: 50px;
+    flex: 0 1 auto;
 `
 const MenuList = styled.ul`
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
-    flex-wrap: wrap;
 `
 
 const Link = styled.a`
     font-family: "DM Sans", sans-serif;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 40px;
     line-height: 1.3;
     text-align: center;
     color: transparent;

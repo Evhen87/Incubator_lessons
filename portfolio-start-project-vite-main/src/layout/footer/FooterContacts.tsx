@@ -11,6 +11,8 @@ export const FooterContacts = () => {
 
 const StyledFooterContacts = styled.div`
     display: flex;
+    column-gap: 63px;
+    font-family: "DM Sans", sans-serif;
 `
 
 const PhoneNumber = styled.p`

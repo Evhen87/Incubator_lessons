@@ -1,11 +1,9 @@
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo.tsx";
-import {Menu} from "../../components/menu/Menu.tsx";
 import {Container} from "../../components/Container.ts";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
-import {SocialMedia} from "../../components/social_media/SocialMedia.tsx";
-
-const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
+import {HeaderMenu} from "./headerMenu/HeaderMenu.tsx";
+import {MobileMenu} from "./mobileMenu/MobileMenu.tsx";
 
 export const Header = () => {
     return (
@@ -13,10 +11,8 @@ export const Header = () => {
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"} wrap={"wrap"} >
                     <Logo />
-                    <FlexWrapper align={"center"}>
-                        <Menu menuItems={items} />
-                        <SocialMedia />
-                    </FlexWrapper>
+                    <HeaderMenu />
+                    <MobileMenu />
                 </FlexWrapper>
             </Container>
         </StyledHeader>
@@ -32,4 +28,3 @@ const StyledHeader = styled.header`
     right: 0;
     z-index: 999999;
 `
-

@@ -5,12 +5,13 @@ import {Container} from "../../../components/Container.ts";
 import {TextGradient} from "../../../components/TextGradient.tsx";
 import {theme} from "../../../styles/Theme.ts";
 import abstract from "../../../assets/images/abstract.svg"
+import {font} from "../../../styles/Common.ts";
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper wrap={"wrap"} align={"center"} justify={"space-around"}>
+                <FlexWrapper wrap={"wrap"} align={"center"} justify={"space-between"}>
                     <MainBody>
                         <Text>Hi 👋,<br/>
                         My name is <br/>
@@ -29,21 +30,40 @@ export const Main = () => {
 
 const StyledMain = styled.main`
     min-height: 100vh;
-    background-color: #191919;
+    background-color: ${theme.colors.primaryBg};
     display: flex;
     overflow: hidden;
+    padding-bottom: 10px;
 `
 const MainBody =styled.div`
     text-align: left;
+    margin-right: 20px;
+    @media screen and (max-width: 990px) {
+        margin: 150px 20px 20px 0;
+    }
+    @media ${theme.media.mobile} {
+        margin: 150px 0 20px 0;
+    }
 `
-const Text =styled.h2`    
-    font-weight: 700;
-    font-size: 58px;
+const Text =styled.h2`
+    ${font({weight: 700, Fmin: 36, Fmax: 58})}
     letter-spacing: -0.02em;
     color: ${theme.colors.font1};
 `
 const PhotoWrapper =styled.div`
-    position: relative;    
+    position: relative;
+    top: 0;
+    right: 0;
+    flex: 1 1 auto;
+    display: flex;    
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    @media screen and (max-width: 990px) {
+        flex: 1 1 100%;
+        height: auto;
+    }
+    
     &:before {
         content: "";
         display: inline-block;
@@ -65,9 +85,8 @@ const Photo = styled.img`
     max-width: 349px;
     max-height: 349px;
     object-fit: cover;
-    position: relative;
-    top: 0;
-    left: 0;    
+    position: relative;   
+    width: 100%;
 `
 
 const Abstract = styled.img`
@@ -79,4 +98,7 @@ const Abstract = styled.img`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @media screen and (max-width: 990px) {
+        display: none;
+    }
 `
