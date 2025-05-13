@@ -2,17 +2,20 @@ import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme.ts";
 import {MobileMenuList} from "../../../components/menu/MobileMenuList.tsx";
 import {SocialMediaMobile} from "../../../components/social_media/media/SocialMediaMobile.tsx";
+import {useState} from "react";
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
 
 export const MobileMenu = () => {
+    const [menuIsOpen, setmenuIsOpen] = useState(false)
+    const onBurgerBtnClick = () => {setmenuIsOpen( !menuIsOpen )}
     return (
         <StyledMobileMenu>
-            <BurgerButton isOpen={false}>
+            <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
                 <span></span>
             </BurgerButton>
 
-            <MobileMenuPopup isOpen={false}>
+            <MobileMenuPopup isOpen={menuIsOpen} onClick={ ()=>{setmenuIsOpen( false )} }>
                 <MobileMenuList menuItems={items} />
                 <SocialMediaMobile />
             </MobileMenuPopup>

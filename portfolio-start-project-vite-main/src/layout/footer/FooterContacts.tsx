@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../styles/Theme.ts";
 
 export const FooterContacts = () => {
     return (
@@ -16,6 +17,10 @@ const StyledFooterContacts = styled.div`
     column-gap: 63px;
     row-gap: 20px;
     font-family: "DM Sans", sans-serif;
+    justify-content: center;
+    @media ${theme.media.tablet} {
+        margin-left: 0;
+    }
 `
 
 const PhoneNumber = styled.p`

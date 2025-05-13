@@ -32,8 +32,6 @@ const StyledMain = styled.main`
     min-height: 100vh;
     background-color: ${theme.colors.primaryBg};
     display: flex;
-    overflow: hidden;
-    padding-bottom: 10px;
 `
 const MainBody =styled.div`
     text-align: left;
@@ -49,8 +47,11 @@ const Text =styled.h2`
     ${font({weight: 700, Fmin: 36, Fmax: 58})}
     letter-spacing: -0.02em;
     color: ${theme.colors.font1};
+    @media screen and (min-width: 1250px) {
+        font-size: 58px;
+    }
 `
-const PhotoWrapper =styled.div`
+const PhotoWrapper =styled.div`    
     position: relative;
     top: 0;
     right: 0;
@@ -87,6 +88,8 @@ const Photo = styled.img`
     object-fit: cover;
     position: relative;   
     width: 100%;
+    top: 0;
+    left: 0;
 `
 
 const Abstract = styled.img`

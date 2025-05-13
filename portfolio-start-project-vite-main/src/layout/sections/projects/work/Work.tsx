@@ -18,7 +18,7 @@ export const Work = (props: WorkPropsType) => {
                 <WorkTitle>{props.title}</WorkTitle>
                 <WorkText>{props.text}</WorkText>
                 <WorkStack>{props.stackText}</WorkStack>
-                <FlexWrapper align={"center"}>
+                <FlexWrapper align={"center"} wrap={"wrap"} rowGap={"10px"}>
                     <PreviewLink href={"#"}>
                         <FlexWrapper >
                             <Icon iconId={"linkChain"} height={"20"} width={"20"} viewBox={"0 0 20 20"}></Icon>
@@ -40,10 +40,9 @@ export const Work = (props: WorkPropsType) => {
 const StyledWork = styled.div`
     border-radius: 20px;
     background-color: ${theme.colors.secondaryBg};
-    max-width: 375px;
+    flex: 1 1 300px;
     width: 33.333%;
-    overflow: hidden;
-    margin-bottom: 65px;
+    overflow: hidden;    
 `
 const Image = styled.img`
     width: 100%;
@@ -58,11 +57,17 @@ const WorkBody = styled.div`
     & > ${FlexWrapper} {
         column-gap: 48px;
     }
+    @media ${theme.media.tablet} {
+        padding: 20px;
+    }
+    @media ${theme.media.mobile} {
+        padding: 15px;
+    }
 `
 const WorkTitle = styled.h4`
     font-weight: 500;
     font-size: 28px;
-    line-height: 0.92857;
+    line-height: 1.2;
     margin-bottom: 17px;
 `
 const WorkText = styled.p`

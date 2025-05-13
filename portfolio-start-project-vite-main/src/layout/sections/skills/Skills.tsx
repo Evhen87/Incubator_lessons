@@ -12,7 +12,7 @@ export const Skills = () => {
                     <SectionTitle>My Tech Stack</SectionTitle>
                     <SectionText> Technologies I’ve been working with recently</SectionText>
                 </SectionTitles>
-                <FlexWrapper wrap={"wrap"} justify={"space-between"}>
+                <FlexWrapper wrap={"wrap"} justify={"space-around"}>
                     <Skill iconId={"html"} width={"120"} height={"120"} viewBox={"0 0 120 120"} />
                     <Skill iconId={"css"} width={"120"} height={"119"} viewBox={"0 0 120 119"} />
                     <Skill iconId={"js"} width={"120"} height={"120"} viewBox={"0 0 120 120"} />

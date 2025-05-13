@@ -16,6 +16,7 @@ export const HeaderMenu = () => {
 const StyledHeaderMenu = styled.div`
     display: flex;
     align-items: center;
+    column-gap: 50px;
     @media screen and (max-width: 820px) {
         display: none;
     }

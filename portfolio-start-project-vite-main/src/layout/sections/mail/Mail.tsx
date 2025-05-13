@@ -9,7 +9,7 @@ export const Mail = () => {
         <StyledMail>
             <Container>
                 <Text>For any questions please mail me:<br/>
-                    <TextGradient>hi@pavanmg.in</TextGradient>
+                    <TextGradient>kushner.aleks@yandex.ru</TextGradient>
                 </Text>
             </Container>
         </StyledMail>
@@ -18,14 +18,17 @@ export const Mail = () => {
 
 const StyledMail = styled.section`
     text-align: center;
-    ${font({Fmin: 36, Fmax: 58})}
+    
 `
 
 const Text = styled.p`
-    font-family: "DM Sans", sans-serif;
-    font-weight: 700;
+    ${font({Fmin: 20, Fmax: 58, family: '"DM Sans", sans-serif', weight: 700})};    
     line-height: 1.3;
     letter-spacing: -0.02em;
     text-align: center;
     color: ${theme.colors.font2};
+    @media screen and (min-width: 1250px) {
+        font-size: 58px;
+    }
+    
 `

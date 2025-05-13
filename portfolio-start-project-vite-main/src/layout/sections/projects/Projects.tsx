@@ -10,6 +10,7 @@ import fourthImage from "../../../assets/images/photos/Rectangle 24.jpg"
 import fifthImage from "../../../assets/images/photos/Rectangle 23.jpg"
 import sixthImage from "../../../assets/images/photos/Rectangle 22.jpg"
 import {Container} from "../../../components/Container.ts";
+import {theme} from "../../../styles/Theme.ts";
 
 const projectItems = ["All", "landing page", "React", "spa"]
 
@@ -21,12 +22,12 @@ export const Projects = () => {
                     <SectionTitle>Projects</SectionTitle>
                     <SectionText>Things I’ve built so far</SectionText>
                 </SectionTitles>
-                <FlexWrapper justify={"center"}>
-                    <MenBox>
-                        <Menu menuItems={projectItems}/>
-                    </MenBox>
-                </FlexWrapper>
-                <FlexWrapper wrap={"wrap"} justify={"space-between"}>
+
+                <MenBox>
+                    <Menu menuItems={projectItems}/>
+                </MenBox>
+
+                <FlexWrapper wrap={"wrap"} justify={"space-between"} columnGap={"46px"} rowGap={"65px"}>
                     <Work text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                           stackText={"Tech stack : HTML , JavaScript, SASS, React"}
                           title={"Project Tile goes here"}
@@ -63,8 +64,24 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
+    ${FlexWrapper} {
+        @media screen and (max-width: 1240px) {
+            column-gap: 35px;
+            row-gap: 45px;
+        }
+        @media ${theme.media.tablet} {
+            column-gap: 30px;
+            row-gap: 40px;
+        }
+        @media ${theme.media.mobile} {
+            column-gap: 15px;
+            row-gap: 20px;
+        }
+    }
     
 `
 const MenBox = styled.div`
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 `

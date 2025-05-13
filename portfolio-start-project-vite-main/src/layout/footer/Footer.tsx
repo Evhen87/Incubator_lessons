@@ -24,7 +24,7 @@ export const Footer = () => {
                     </FlexWrapper>
                 </FooterTop>
                 <FooterBottom>
-                    <FlexWrapper justify={"space-between"} align={"center"}>
+                    <FlexWrapper justify={"space-between"} align={"center"} wrap={"wrap"} columnGap={"40px"}>
                         <Menu menuItems={items}/>
                         <StyledFooterText>Designed and built by <TextGradient>Yauheny Kushner</TextGradient> with <TextGradient>Love</TextGradient> & <TextGradient>Coffee</TextGradient></StyledFooterText>
                     </FlexWrapper>
@@ -37,6 +37,11 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
     padding: 60px 0;
     background-color: ${theme.colors.primaryBg};
+    ${FlexWrapper} {
+        @media ${theme.media.tablet} {
+            justify-content: center;
+        }
+    }
 `
 const StyledFooterText = styled.p`
     font-weight: 400;
@@ -50,5 +55,11 @@ const FooterTop = styled.div`
     border-bottom: 2px solid #42446E;
 `
 const FooterBottom = styled.div`
-    padding: 45px 0 60px 0;
+    padding: 45px 0 0px 0;
+    ${FlexWrapper} {
+        @media screen and (max-width: 1100px) {
+            row-gap: 15px;
+            justify-content: center;
+        }
+    }
 `

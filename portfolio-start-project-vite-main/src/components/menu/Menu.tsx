@@ -23,12 +23,13 @@ export const Menu = (props: {menuItems: Array<string>}) => {
     );
 };
 
-const StyledMenu = styled.nav`
-    margin-right: 50px;
+const StyledMenu = styled.nav`    
 `
 const MenuList = styled.ul`
     display: flex;
-    gap: 30px;
+    justify-content: center;
+    column-gap: 30px;
+    row-gap: 10px;
     flex-wrap: wrap;
 `
 
